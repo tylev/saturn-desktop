@@ -6884,10 +6884,10 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
-comlinkjs@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/comlinkjs/-/comlinkjs-3.2.0.tgz#26874718627f4fbd3e45fe5c39b2ddf001e56bed"
-  integrity sha512-2eawZHTjhK5Y1G6RZtSIqLijedIsULYQxnkC4MOhleUPgLRatMhqlflzWClyWRb6cLrLU6oAxDTT/Bl/fw/H7g==
+comlink@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/comlink/-/comlink-4.1.0.tgz#900b7532cb8b40da6a4d3a087c8337275e310e5b"
+  integrity sha512-YU5KVol4zfJsCyl5F4ea2+EfIntsUaHdudxcC58H59gF7j6retT4C/EAY/zjReQKSFAOxjMYW2OeoL39EDsjBw==
 
 comma-separated-tokens@^1.0.0:
   version "1.0.7"
