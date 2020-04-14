@@ -1,0 +1,11 @@
+{
+  "name": "com.btcinc.saturn",
+  "description": "Tylers LN Application",
+  "path": "HOST_PATH",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://bpahecboiihfmahnfjcffpeiecnomhbb/",
+    "chrome-extension://bmfbcejdknlknpncfpeloejonjoledha/",
+    "chrome-extension://iehbmpdlaohmohgnenhckjjdkdgkeihd/"
+  ]
+}

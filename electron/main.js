@@ -16,11 +16,13 @@ import get from 'lodash/get'
 import path from 'path'
 import os from 'os'
 import fs from 'fs'
+import { spawn } from 'child_process'
 import bip21 from 'bip21'
 import config from 'config'
 import { mainLog } from '@zap/utils/log'
 import { parseLnUrl } from '@zap/utils/lnurl'
 import appRootPath from '@zap/utils/appRootPath'
+import nativeMsgHostDir from '@zap/utils/nativeMsgHostDir'
 import themes from '@zap/renderer/themes'
 import ZapMenuBuilder from './menuBuilder'
 import ZapController from './controller'
@@ -191,6 +193,25 @@ app.on('will-finish-launching', () => {
   })
 })
 
+const installNativeHost = () => {
+  const cmd = nativeMsgHostDir()
+  // console.log('cmd:', cmd)
+  const childproc = spawn(cmd)
+  // childproc.stdout.on('data', data => {
+  //   console.log(`stdout: ${data}`)
+  // })
+  childproc.stderr.on('data', data => {
+    console.error(`stderr: ${data}`)
+  })
+  // childproc.on('close', code => {
+  //   if (code === 0) {
+  //     console.log('child process complete.')
+  //   } else {
+  //     console.log(`child process exited with code ${code}`)
+  //   }
+  // })
+}
+
 /**
  * Initialize Zap as soon as electron is ready.
  */
@@ -218,6 +239,9 @@ app.on('ready', async () => {
       mainLog.warn('Unable to determine user settings: %s', e.message)
     }
   }
+
+  // Install native messaging host
+  installNativeHost()
 
   // Create a new browser window.
   mainWindow = new BrowserWindow({

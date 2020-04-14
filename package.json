@@ -57,8 +57,8 @@
     "yarn": ">=1.0.0"
   },
   "build": {
-    "productName": "Zap",
-    "appId": "org.develar.Zap",
+    "productName": "Saturn",
+    "appId": "com.btc_inc.saturn_desktop",
     "generateUpdatesFilesForAllChannels": true,
     "files": [
       "dist/",
@@ -80,6 +80,10 @@
       {
         "from": "node_modules/lnd-grpc/proto",
         "to": "resources/proto"
+      },
+      {
+        "from": "resources/nativeMsgHost",
+        "to": "resources/nativeMsgHost"
       }
     ],
     "protocols": [
