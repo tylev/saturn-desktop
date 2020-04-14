@@ -27,7 +27,7 @@ const nativeMsgHostDir = () => {
         'nativeMsgHost',
         nativeMsgHostName()
       )
-    : join(appRootPath(), 'resources', 'nativeMsgHost', 'nativeMsgHost', nativeMsgHostName())
+    : join(appRootPath(), 'resources', 'nativeMsgHost', nativeMsgHostName())
 }
 
 export default nativeMsgHostDir

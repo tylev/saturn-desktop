@@ -37,4 +37,4 @@ sed -i -e "s/HOST_PATH/$ESCAPED_HOST_PATH/" "$TARGET_DIR/$HOST_NAME.json"
 chmod o+r "$TARGET_DIR/$HOST_NAME.json"
 chmod +x "$HOST_PATH"
 
-echo "Native messaging host $HOST_NAME has been installed."
+# echo "Native messaging host $HOST_NAME has been installed."
