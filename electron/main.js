@@ -138,10 +138,27 @@ const handleLndconnectLink = input => {
   }
 }
 
+/**
+ * handleSaturnLink - Handler for saturn: links.
+ *
+ * @param {string} input Saturn link
+ */
+const handleSaturnLink = input => {
+  try {
+    zap.sendMessage('initApp', { input })
+    console.warn('handleSaturnLink')
+    zap.sendMessage('saturnUri', input)
+    mainWindow.show()
+  } catch (e) {
+    mainLog.warn('Unable to process saturn uri: %s', e)
+  }
+}
+
 const protocolHandlers = {
   bitcoin: handleBitcoinLink,
   lightning: handleLightningLink,
   lndconnect: handleLndconnectLink,
+  saturn: handleSaturnLink,
 }
 
 /**
@@ -449,3 +466,4 @@ app.on('ready', async () => {
 app.setAsDefaultProtocolClient('bitcoin')
 app.setAsDefaultProtocolClient('lightning')
 app.setAsDefaultProtocolClient('lndconnect')
+app.setAsDefaultProtocolClient('saturn')

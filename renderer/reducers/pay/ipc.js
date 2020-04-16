@@ -76,6 +76,12 @@ export const bitcoinPaymentUri = (event, { address, options = {} }) => dispatch 
   }
 }
 
+export const saturnUri = (event, { address, options = {} }) => dispatch => {
+  console.warn('saturnUri IPC.js CALLED')
+  const { amount } = options
+  dispatch(setRedirectPayReq({ address, amount }))
+}
+
 /**
  * lnurlError - IPC handler for lnurlError event.
  *

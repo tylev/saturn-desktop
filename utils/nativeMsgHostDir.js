@@ -1,7 +1,7 @@
 import path, { dirname, join } from 'path'
+import { platform } from 'os'
 import isDev from 'electron-is-dev'
 import appRootPath from '@zap/utils/appRootPath'
-import { platform } from 'os'
 
 /**
  * nativeMsgHostName - Get the OS specific native messaging host install script.

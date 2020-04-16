@@ -2,7 +2,7 @@ import createIpc from 'redux-electron-ipc'
 import { initApp, terminateApp, openPreferences } from './app'
 import { killNeutrino } from './neutrino'
 import { receiveLocale } from './locale'
-import { bitcoinPaymentUri, lightningPaymentUri, lnurlRequest, lnurlError } from './pay'
+import { bitcoinPaymentUri, saturnUri, lightningPaymentUri, lnurlRequest, lnurlError } from './pay'
 import { lndconnectUri } from './onboarding'
 import { saveInvoiceFailure, saveInvoiceSuccess } from './activity'
 import {
@@ -20,6 +20,7 @@ const ipc = createIpc({
   receiveLocale,
   openPreferences,
   bitcoinPaymentUri,
+  saturnUri,
   lightningPaymentUri,
   lndconnectUri,
   saveBackupSuccess,

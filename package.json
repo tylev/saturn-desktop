@@ -105,6 +105,13 @@
           "lndconnect"
         ]
       }
+      ,
+      {
+        "name": "Saturn",
+        "schemes": [
+          "saturn"
+        ]
+      }
     ],
     "artifactName": "${productName}-${os}-${arch}-v${version}.${ext}",
     "afterSign": "./scripts/afterSignHook.js",
