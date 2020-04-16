@@ -118,13 +118,6 @@ class ConnectionType extends React.Component {
                 width={1 / 3}
               />
               <ConnectionTypeItem
-                description={<FormattedMessage {...messages.connection_type_custom_description} />}
-                label={<FormattedMessage {...messages.connection_type_custom_label} />}
-                mx={5}
-                value="custom"
-                width={1 / 3}
-              />
-              <ConnectionTypeItem
                 description={<FormattedMessage {...messages.connection_type_import_description} />}
                 label={<FormattedMessage {...messages.connection_type_import_label} />}
                 mb={5}

@@ -6,8 +6,8 @@ import PlusOnboarding from 'components/Icon/PlusOnboarding'
 
 const ICONS = {
   create: { icon: PlusOnboarding, width: 80, height: 80 },
-  custom: { icon: ConnectOnboarding, width: 80, height: 80 },
-  import: { icon: ImportOnboarding, width: 80, height: 80 },
+  custom: { icon: ConnectOnboarding, width: 40, height: 40 },
+  import: { icon: ImportOnboarding, width: 40, height: 40 },
 }
 
 const ConnectionTypeItem = props => {
